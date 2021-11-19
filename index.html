@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1>Reusable retry in TypeScript forked</h1>
+
+    <p>
+      We communicate with many third-party service providers that, sadly, don’t
+      have the best track record. We never assume a third party to be up 100% of
+      the time, so we must handle occasional request failures. One way of
+      handling service interruptions is simply retrying the operation.
+    </p>
+
+    <p>
+      A simple (but admittedly naive) retry function could be implemented like
+      the one in <b>"src/retryFn.ts"</b>
+    </p>
+
+    <p>
+      This function takes the function that is to be retried as its first
+      argument, and some additional options as its second. As long as there are
+      tries available the given function will be called and retried until either
+      the function returns a result, or we run out of tries. Either the result
+      of the function or the last error it throws are exposed to the outside
+      world.
+    </p>
+
+    <p>
+      <b>
+        A) Type this function so there are no type errors and that any function
+        that doesn’t require any arguments can be retried. The return type of
+        the original function must be preserved, wrapped in a promise.
+      </b>
+    </p>
+
+    <p>
+      <b>
+        B) Complete the unit tests in "retryFn.test.ts" and test all code paths.
+      </b>
+      <i>
+        You can run tests by going to the Tests tab. Tests are written in the 
+        <b>"retryFn.test.ts"</b> file using jest:
+        <a href=https://jestjs.io/>https://jestjs.io/</a>
+      </i>
+    </p>
+  </body>
+</html>
